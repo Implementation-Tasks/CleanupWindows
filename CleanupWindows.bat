@@ -6,6 +6,9 @@ echo.
 echo Removing temporary files...
 del /f /s /q %temp%\*.*
 del /f /s /q %systemroot%\Temp\*.*
+del /f /s /q %systemroot%\Prefetch\*.*
+del /f /s /q %systemroot%\Recent Place\*.*
+
 echo.
 
 :: Clear Recycle Bin
