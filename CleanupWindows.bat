@@ -3,7 +3,7 @@ echo Starting Windows cleanup...
 echo.
 
 :: Remove temporary files
-echo Removing temporary files...
+echo Removing temporary and junk files...
 del /f /s /q %temp%\*.*
 del /f /s /q %systemroot%\Temp\*.*
 del /f /s /q %systemroot%\Prefetch\*.*
@@ -26,7 +26,10 @@ echo Cleaning up system files...
 cleanmgr /sageset:1
 cleanmgr /sagerun:1
 echo.
-
+:: Clear up your RAM Cache
+echo Cleaning up RAM Cache...
+ipconfig /FlushDNS
+echo.
 :: Defragment hard drive
 echo Defragmenting hard drive...
 defrag C: /U /V
